@@ -74,12 +74,9 @@ void setup() {
     Serial.println(WiFi.localIP());
     client.setServer(mqtt_server, mqtt_port);
     client.setCallback(callback);
-  //  dht.begin();
 }
 
 void loop() {
-   // int humidity; //= readHumidity();//int sensorPin = A0;//
-     //int temperature;// = readTemperature();
   int Moisture;
   Moisture = analogRead(sensorPin);
   Moisture = map(Moisture, 0, 1023, 0, 100);
